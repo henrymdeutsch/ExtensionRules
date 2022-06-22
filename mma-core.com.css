@@ -1,0 +1,16 @@
+/* ANTI-AD */
+
+/* .sdbr = sidebar, .ctnt = content */
+.sdbr, .ctnt > *:not(.dta, .nxpr), [id*='IL_'], [class*='IL_'], [class*='ads'], [class*='google'], [id*='ADSLOT'], #tlbrd, #dtls-foot, .grec, .banr, #pxftr {
+  position: absolute !important; top: -99999999px !important; left: -9999999px !important;
+  opacity: 0 !important; z-index: -99999 !important;
+  width: 0 !important; height: 0 !important;
+  /* if you set display to none, their javascript will see this and disable the video */
+}
+.ctnt {
+  width: 100% !important;
+}
+
+.vid body > *:not(#upstream-player) {
+  display: none !important;
+}

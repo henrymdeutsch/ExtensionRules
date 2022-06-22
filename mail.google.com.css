@@ -1,0 +1,62 @@
+/* ELON (our lord and savior) > gmail */
+
+/* delete gmail logo */
+header a img {
+  display: none !important;
+}
+
+header:nth-child(1) a[aria-label='Gmail'] {
+  /* background images
+  Happy doggo: https://i0.wp.com/cryptonetwork.news/wp-content/uploads/2020/07/elonmusk.png?resize=512%2C512&ssl=1
+  */
+  background: url('https://i0.wp.com/cryptonetwork.news/wp-content/uploads/2020/07/elonmusk.png?resize=512%2C512&ssl=1');
+  width: 180px !important; 
+  height: 60px !important;
+  box-shadow: rgba(0, 0, 0, 0.0) 0px 3px 5px 3px; /* color h-offset v-offset blur spread */
+  position: relative !important;
+  left: 0px !important;
+  top: 0px !important;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  border-radius: 10%;
+  
+  /* effects */
+  filter: invert(0%);
+  opacity: 100%;
+  /* transform: rotateY(180deg); */
+  transform: rotate(0deg);
+}
+
+/* get a cooler background photo upineere */
+div[aria-live="polite"] + div .wl > div{
+  background-image: url('https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg') !important;
+}
+
+/* Woohoo! You've read all the messages in your inbox. */
+[role="tabpanel"] .qd::before { content: 'You\'ve read all our shit guy. Go somewhere else.'; font-size: 14px; padding: 14.793px 0; line-height: 44px;  }
+[role="tabpanel"] .qd {font-size: 0 !important; }
+
+/* so stupid, why do i do this  */
+[aria-label="Inbox"]::before { content: 'Binbox'; font-size: 14px; }
+[aria-label="Starred"]::before { content: 'Barred'; font-size: 14px; }
+[aria-label="Snoozed"]::before { content: 'Boozed'; font-size: 14px; }
+[aria-label="Sent"]::before { content: 'Bent'; font-size: 14px; }
+[aria-label="Drafts"]::before { content: 'Brafts'; font-size: 14px; }
+[aria-label*="Johns Hopkins"]::before { content: 'Bohns Bobkins'; font-size: 14px; }
+[aria-label*="Notes"]::before { content: 'Botes'; font-size: 14px; }
+[aria-label="Important"]::before { content: 'Bimportant'; font-size: 14px; }
+[aria-label="Chats"]::before { content: 'Bats'; font-size: 14px; }
+[aria-label="Scheduled"]::before { content: 'Beduled'; font-size: 14px; }
+[aria-label="All Mail"]::before { content: 'Ball Mail'; font-size: 14px; }
+[aria-label*="Spam"]::before { content: 'Spam (silent b)'; font-size: 14px; }
+[aria-label="Trash"]::before { content: 'Brash'; font-size: 14px; }
+[aria-label*="Categories"]::before { content: 'Bategories'; font-size: 14px; }
+[aria-label*="Social"]::before { content: 'Bocial'; font-size: 14px; }
+[aria-label*="Updates"]::before { content: 'Bubdates'; font-size: 14px; }
+[aria-label*="Forums"]::before { content: 'Borums'; font-size: 14px; }
+[aria-label="Promotions"]::before { content: 'Bromotions'; font-size: 14px; }
+[href*="labels"]::before { content: 'Babels'; font-size: 14px; }
+div[data-tooltip="Create new label"] a::before { content: 'Breate'; font-size: 14px; }
+
+[aria-label="Inbox"], [aria-label="Starred"], [aria-label="Snoozed"], [aria-label="Sent"], [aria-label="Drafts"], [aria-label*="Johns Hopkins"], [aria-label*="Notes"], [aria-label="Important"], [aria-label="Chats"], [aria-label="Scheduled"], [aria-label="All Mail"], [aria-label*="Spam"], [aria-label="Trash"], [aria-label*="Categories"], [aria-label*="Social"], [aria-label*="Updates"], [aria-label*="Forums"], [aria-label="Promotions"], [href*="labels"], div[data-tooltip="Create new label"] a { font-size: 0 !important; position: relative !important; top: 2px; }

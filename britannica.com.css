@@ -1,0 +1,27 @@
+/* ANTI-AD */
+
+/* ad at screen bottom, redundant */
+#AD_STATIC_CATFISH, img[alt*="Advertisement"] {
+  display: none !important;
+}
+
+/* column of ads on right */
+aside.col-md-da-300 {
+  display: none !important;
+}
+
+/* block ads within content */
+.google-ad-iframe {
+  display: none !important;
+}
+
+/* small britanica flag on lower left */
+.marketing-UA_BANNER {
+  display: none !important;
+}
+
+/* make content tag fill whole screen */
+.col-sm.mendel-content-rail {
+  width: 100% !important;
+  max-width: none !important;
+}

@@ -1,0 +1,71 @@
+/* DE-FANGER */
+/*** Makes it less addictive by reducing the number of thumbnails throughout the site. ***/
+
+/* main page */
+/*ytd-rich-grid-row, ytd-rich-item-renderer:nth-child(n+9), #secondary {
+    display: none !important;
+}
+*/
+
+/* Thumbnails on main page and sidebar */
+ytd-rich-grid-row:nth-child(n+15), #secondary {
+  display: none !important;
+}
+/* first row always seems to fuck up rendering, so just take out */
+.style-scope.ytd-rich-grid-renderer#contents:first-child {
+  display: none !important;
+}
+
+/* Artist page */
+ytd-item-section-renderer:nth-child(n+2), ytd-grid-video-renderer:nth-child(n+4) {
+  display: none !important;
+}
+
+/* "Shorts" -- the second tag of this kind is News, so don't delete that */
+ytd-rich-section-renderer:nth-child(1) {
+  display: none !important;
+}
+
+/* end-of-video thumbnails*/
+.html5-endscreen {
+  display: none !important;
+}
+
+/* no ads mid-watch */
+.ytp-ad-overlay-slot {
+  display: none !important;
+}
+
+
+/*** NOT THAT IMPORTANT ***/
+/* no shorts, trending, header*/
+ytd-reel-video-renderer:nth-child(n+4), ytd-video-renderer:nth-child(n+4), #header {
+  display: none !important;
+}
+
+/* horizontal line at top */
+ytd-rich-shelf-renderer {
+  border: none !important;
+}
+
+
+/*** ASTHETIC ***/
+/* swap Y logo for our lord and savior */
+#logo-icon {
+  content: url('https://s1.3dmixers.com/things/64/fa/76/480689/large_display_ElonMusk_Original_Photo.webp');
+  transform: rotate(90deg);
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+#logo-icon svg {
+  display: none !important;
+}
+
+/* make all thumbnails our lord and savior */
+/*#contents:nth-child(even):not(#contents #content) .ytd-thumbnail img {
+  content: url('https://s1.3dmixers.com/things/64/fa/76/480689/large_display_ElonMusk_Original_Photo.webp');
+  transform: rotate(90deg);
+} */
+
+

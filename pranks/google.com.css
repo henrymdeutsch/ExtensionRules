@@ -1,0 +1,79 @@
+/* Adds gay porn to search results */
+/* Note: The order of titles & texts replaced won't be in order */
+
+
+/*** Title replace ***/
+
+/* below are attempst to avoid styling divs that aren't shown, by using a bunch of :not's */
+/* .g:not(.g + div .g)... */
+/* h1 + div[data-async-context] .g... */
+/* .g:not([id*='WEB'] *)... */
+.g .g, .g .g *, ul.FxLDp * { display: none !important; } /* I don't want to deal with nested links */
+.g:nth-of-type(-n + 4) .yuRUbf a h3 { font-size: 0 !important; }
+.g:not(.g + div .g):nth-of-type(-n + 4) .yuRUbf a > div::before, .g + div .g:nth-of-type(1) .yuRUbf a > div::before { font-size: 14px; color: #bdc1c6; }
+.g:not(.g + div .g):nth-of-type(-n + 4) .yuRUbf a > div::after, .g + div .g:nth-of-type(1) .yuRUbf a > div::after { font-size: 14px; color: #969ba1; }
+.g:not(.g + div .g):nth-of-type(-n + 4) .yuRUbf a cite, .g + div .g:nth-of-type(1) .yuRUbf a cite { display: none !important; }
+.g:not(.g + div .g):nth-of-type(-n + 4) .yuRUbf a h3::before, .g + div .g:nth-of-type(1) .yuRUbf a h3::before { font-size: 20px; color: #c58af9; }
+
+.g:not(.g + div .g):nth-of-type(1) .yuRUbf a h3::before { content: "Gay Porn @ Gay Male Tube"; } /* 1 */
+.g:not(.g + div .g):nth-of-type(1) .yuRUbf a > div::before { content: "https://www.gaymaletube.com"; }
+
+.g:not(.g + div .g):nth-of-type(2) .yuRUbf a h3::before { content: "Gay Porn Videos & Free Gay Men Twink Sex Movies | PornHub"; } /* 2 */
+.g:not(.g + div .g):nth-of-type(2) .yuRUbf a > div::before { content: "https://www.pornhub.com"; }
+.g:not(.g + div .g):nth-of-type(2) .yuRUbf a > div::after { content: " › gayporn"; }
+
+.g:not(.g + div .g):nth-of-type(3) .yuRUbf a h3::before { content: "Gay Porn Homepage, Free Gay Sex Videos - XVIDEOS.COM"; color: #8ab4f8; }
+.g:not(.g + div .g):nth-of-type(3) .yuRUbf a > div::before { content: "https://www.xvideos.com"; }
+.g:not(.g + div .g):nth-of-type(3) .yuRUbf a > div::after { content: " › gay"; }
+
+.g:not(.g + div .g):nth-of-type(4) .yuRUbf a h3::before { content: "Free Gay Porn Videos & Homosexual Sex Movies | xHamster"; } /* 4 */
+.g:not(.g + div .g):nth-of-type(4) .yuRUbf a > div::before { content: "https://www.xhamster.com"; }
+.g:not(.g + div .g):nth-of-type(4) .yuRUbf a > div::after { content: " › gay"; }
+
+.g + div .g:nth-of-type(1) .yuRUbf a h3::before { content: "Gay Free Porn, Sex, Tube Videos, XXX Pics, Dicks in Porno ..."; } /* 5 */ 
+.g + div .g:nth-of-type(1) .yuRUbf a > div::before { content: "https://www.xnxx.com"; }
+.g + div .g:nth-of-type(1) .yuRUbf a > div::after { content: " › gay"; }
+
+
+/*** Text replace ***/
+
+/* 1st way */
+.g:nth-of-type(-n + 4) .IsZvec { height: 22px !important; }
+.g:nth-of-type(-n + 4) .IsZvec * { display: none !important; }
+.g:nth-of-type(-n + 3) .IsZvec { padding: 0 0 40px 0 !important; box-sizing: content-box; } /* first 3 happen to have category text */
+.g:nth-of-type(-n + 4) .IsZvec::before, .g:nth-of-type(1) div[data-header-feature] + div::before { font-size: 14px; display: block; max-width: 672px; width: 600px; }
+.g:nth-of-type(-n + 4) .IsZvec::after, .g:nth-of-type(1) div[data-header-feature] + div::after { color: #8ab4f8; }
+
+.g:nth-of-type(1) .IsZvec::before { content: "GayMaleTube has the hottest gay porn. We cater to all your needs and make you rock hard in seconds. Enter & get off!"; } /* 1 */
+.g:nth-of-type(1) .IsZvec::after { content: "Filipina/Filipino (23,732) · Hunk (744,384) · Story (45,231) · Cum Inside (122,960)"; }
+
+.g:nth-of-type(2) .IsZvec::before { content: "Gay porn with sexy nude male pornstars. Visit Pornhub.com for free gay sex videos bursting with big dick homosexual hunks. Hot twinks and mature gay bears ..."; } /* 2 */
+.g:nth-of-type(2) .IsZvec::after { content: "English · Most Viewed · Top Rated · Porno Gay";}
+
+.g:nth-of-type(3) .IsZvec::before { content: "Best Army Gay Porn scenes of 2020. Hot muscular and horny military studs fucking one another featuring Brandon Anderson, Roman Todd, Ryan Jordan and others. "; } /* 3 */
+.g:nth-of-type(3) .IsZvec::after { content: "Relevance · Big Cock · Macho · Amateur";}
+
+.g:nth-of-type(4) .IsZvec::before { content: "xHamster serves all Gay Porn Videos for free. Stream new homosexual sex tube movies of uncensored hardcore fucking action with hot men & boys right now!"; } /* 4 */
+
+
+/* 2nd way */
+.g:nth-of-type(-n + 2) div[data-header-feature] + div { font-size: 0; }
+.g:nth-of-type(-n + 2) div[data-header-feature] + div::before { font-size: 14px;}
+
+.g:nth-of-type(1) div[data-header-feature] + div::before { content: "XNXX delivers free Gay sex movies and fast free porn videos (tube porn). Now 10 million+ sex vids available for free! Featuring hot dicks, sexy guys in xxx ..."; } /* 5 */
+/*.g:nth-of-type(1) div[data-header-feature] + div::after { content: "Big PeePee (3,894) · Small PeePee (145) · Story Time (1,482) · Pee (22,960)"; } */
+
+.g:nth-of-type(2) div[data-header-feature] + div::before { content: "Dive into the world of best gay porn movies and watch homemade male sex clips along with latino and black big cock men hardcore videos."; } /* 6 */
+
+.g:nth-of-type(3) div[data-header-feature] + div::before { content: "Online video service that offers more than 10000 high quality free gay porn videos. One of the best collections of free gay sex movies in near HD (high ..."; } /* 7 */
+
+.g:nth-of-type(3) div[data-header-feature] + div::before { content: "IceGay.tv - You can find all of your favorite Gay Porn sorted by categories. Enjoy and bookmark!"; } /* 8 */
+
+/*** extraneous text at bottom ***/
+div[data-content-feature] + div[data-content-feature] * { /* ex: "Mar 21, 2018 · Uploaded by Johnny Knoxville" */
+    color: green !important;
+    display: none !important;
+}
+
+
+/*** Mess with video-voyager children ***/

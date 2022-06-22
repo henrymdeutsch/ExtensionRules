@@ -1,0 +1,21 @@
+/* ANTI-AD */
+
+[id*='_ads_'], #mainLeaderboard, #midcontentadcontainer, #midcontentadcontainer +hr {
+  display: none !important;
+  height: 0 !important; overflow: hidden !important;
+}
+
+#right {
+  display: none !important;
+}
+
+#main {
+  width: 90% !important; /* 100% */
+}
+
+/* MAKE QUIZZES HARDER */
+/* stops them tailoring the length of input quiz to the correct answer. it gives it away! This makes things harder. */
+
+/* input {
+  width: 200px !important;
+} */

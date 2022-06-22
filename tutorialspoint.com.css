@@ -1,0 +1,18 @@
+/* ANTI-AD */
+
+/* the ads re-populate but whatever */
+[id*='-ads'], [id*='_ad_'], [id*='_adr_abp_'], [class*='-ads'], #ad, .ad, tocCollapse *, .toc.reading, #stickyparent, #privacy-banner { /* works somehow */
+  display: none !important;
+}
+
+/* make main pannel wider */
+#mainContent {
+  width: 73% !important; /* makes sidebar disappear for small window but whatever */
+  float: right !important;
+}
+
+/* fixing their website */
+a.demo {
+  z-index: 999 !important;
+  right: 70px;
+}

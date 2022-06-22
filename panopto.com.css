@@ -1,0 +1,98 @@
+/* ELON */
+/* Neuralink is always a better name. They would get a copyright infringement but anyways... */
+
+/* delete the image that was there */
+#panoptoLogoLink *, .logo * {
+  display: none !important;
+}
+.page-header.flex-header-item * {
+  opacity: 0;
+}
+
+/* Boiler plate for all Panopto logos */
+#panoptoLogoLink, .page-header.flex-header-item, .logo {
+  /* Photos
+  Elon head: https://i0.wp.com/cryptonetwork.news/wp-content/uploads/2020/07/elonmusk.png?resize=512%2C512&ssl=1
+  Neuralink logo: https://images.cars.com/cldstatic/wp-content/uploads/neuralinklogo.png
+  */
+  background: url('https://images.cars.com/cldstatic/wp-content/uploads/neuralinklogo.png');
+  max-width: none !important;
+  max-height: none !important;
+  box-shadow: rgba(0, 0, 0, 0.0) 0px 3px 5px 3px; /* color h-offset v-offset blur spread */
+  position: relative !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 200px !important; 
+  height: 50px !important;
+}
+
+/* very big on sign in page*/
+.page-header.flex-header-item {
+  background-position: center;
+  margin: 20px auto 0 auto;
+  width: 1px !important; 
+  height: 1px !important;
+  padding: 50px 130px;
+  max-height: none !important;
+  max-width: none !important;
+  left: 0px !important;
+  top: 0px !important;
+}
+
+/* sign in page after email */
+.logo {
+  position: relative !important;
+  top: 40px;
+  left: 10px;
+}
+
+/* big logo on main screen */
+#SiteHeader #logoContainer #panoptoLogoLink {
+  width: 200px !important; 
+  height: 50px !important;
+  left: 0px !important;
+  top: -5px !important;
+}
+
+/* small logo on video viewer */
+#viewerHeader #logoContainer #panoptoLogoLink {
+  width: 100px !important; 
+  height: 50px !important;
+  left: 0px !important;
+  top: 0px !important;
+}
+
+
+/* it's better when they mis-spell your name */
+#loginLink::before, #loginControl_currentUser::before {
+  content: "HENRY DOETCH";
+  font-size: 21px;
+}
+#loginControl_userKey::before {
+  content: "hdoych3";
+  font-size: 14px;
+}
+#loginControl_currentUser::before {
+  font-size: 20px !important;
+}
+#loginLink, #loginControl_currentUser, #loginControl_userKey {
+  font-size: 0px !important;
+}
+
+/* fix their website content */
+.fmp-header::before {
+  content: "Download Knowledge Now";
+  font-size: 50px;
+}
+.fmp-header, pan-login form span.ng-tns-c1-0, pan-login form a {
+  font-size: 0px !important;
+}
+pan-login form span.ng-tns-c1-0::before {
+  content: "Don't like Elon Musk?";
+  font-size: 15px;
+}
+pan-login form a::before {
+  content: "Consider suicide.";
+  font-size: 15px;
+}

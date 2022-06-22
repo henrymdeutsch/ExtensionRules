@@ -1,0 +1,5 @@
+/* ANTI-AD */
+
+/* get rid of ads on aside panel */
+.grid-layout__aside { display: none !important; }
+.grid-layout__content { grid-column-end: span 10 !important; }

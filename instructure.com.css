@@ -1,0 +1,19 @@
+/* ELON */
+
+/* elon face better than JHU logo */
+.ic-app-header__logomark {
+  background-image: url('https://i0.wp.com/cryptonetwork.news/wp-content/uploads/2020/07/elonmusk.png?resize=512%2C512&ssl=1');
+  height: 70px !important;
+  z-index: 999999 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  padding: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* hover color disappeared, so I'll add that back in */
+.ic-app-header__logomark:hover {
+  background-color: #002459;
+}

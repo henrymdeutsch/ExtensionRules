@@ -1,0 +1,11 @@
+/* ANTI-AD */
+
+/* wipe out side bar */
+.my-4, .col-span-7 {
+  display: none !important;
+}
+
+/* enlarge main content */
+.col-span-14 {
+  width: 135% !important;
+}

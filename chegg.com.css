@@ -1,0 +1,33 @@
+/* ANTI-AD */
+
+/* sidebar */
+.col-3, [data-area="right-rail"] {
+  display: none !important;
+}
+
+/* make main content bigger */
+.col-9, [data-area="main"] {
+  width: 100% !important;
+  min-width: 1000px !important;
+}
+
+/* messing with site structure to make real-estate bigger */
+.chg-container {
+  width: 94% !important;
+  max-width: none !important;
+}
+.toolbar {
+  width: 1105px !important;
+}
+
+/* with centered content, the headers look too far to the left. Re-center them */
+.chgg-hdr-content, .chgg-hdr-kitkat-content {
+  position: relative !important; left: 150px !important;
+}
+.chgg-hdr-content {
+  padding: 10px !important;
+  box-sizing: content-box !important;
+}
+.chgg-hdr-kitkat-content {
+  padding: 10px 0 50px 0;
+}

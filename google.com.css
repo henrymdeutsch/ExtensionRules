@@ -1,0 +1,80 @@
+/* MAIN PAGE GIF - worked in chrome, not safari. */
+
+/* make image's parent container bend to fit image */
+.o3j99.LLD4me.LS8OJ {
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* re-purpose a div for new picture */
+.k1zIA.kKvsb:nth-child(2) {
+  background: url('https://64.media.tumblr.com/ab449da7c5832f2fb200facf38a2dcee/2d7471923fccc514-af/s400x600/5f394bf9d93862ee90ea64de5d257f5872ff71b4.gifv');
+  background-repeat: no-repeat !important;
+  width: 266px !important; 
+  height: 243px !important;
+  max-height: none !important;
+  max-width: none !important;
+  box-sizing: content-box !important; /* don't make me calculate height based on border or padding */
+}
+
+
+/* ELON */
+/* for the post-search page, where the logo is small on upper left */
+
+/* delete the logo that's there */
+form a#logo *, form c-wiz a * {
+  display: none !important
+}
+
+/* repurpose div for new picture :) */
+form a#logo, form c-wiz a{
+  background: url('https://64.media.tumblr.com/ab449da7c5832f2fb200facf38a2dcee/2d7471923fccc514-af/s400x600/5f394bf9d93862ee90ea64de5d257f5872ff71b4.gifv');
+  background: url('https://i0.wp.com/cryptonetwork.news/wp-content/uploads/2020/07/elonmusk.png?resize=512%2C512&ssl=1');
+  /* Background photos:
+  Eee: https://64.media.tumblr.com/ab449da7c5832f2fb200facf38a2dcee/2d7471923fccc514-af/s400x600/5f394bf9d93862ee90ea64de5d257f5872ff71b4.gifv
+  Shitty chrome: https://iconarchive.com/download/i23948/mag1cwind0w/o-sunny-day/osd-chrome.ico
+  Elon robot with Elon limbs: https://i.redd.it/u0fb6iazrgb51.png
+  Elon nice face: https://bossbetty.com/wp-content/uploads/2020/12/Elon-Musk.png
+  Elon stank face: https://preview.redd.it/hmhd28rzrly01.png?auto=webp&s=e36b30faacf57ffc453240e40aa28726a5e4541d
+  Elon bemused and befuzzled: https://i0.wp.com/cryptonetwork.news/wp-content/uploads/2020/07/elonmusk.png?resize=512%2C512&ssl=1
+  Cute cat: https://img-10.stickers.cloud/packs/92eab346-8782-43f7-a501-3b16252dc834/webp/8e4e28ed-e830-4a8b-bf5e-37eb9bdebe4b.webp
+  */
+  width: 120px; 
+  height: 140px;
+  max-height: none !important;
+  max-width: none !important;
+  
+  background-color: rgb(48, 49, 52) !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 3px 0px !important; /* color h-offset v-offset blur spread */
+  position: relative !important;
+  top: -10px !important; /* -10 is on bar, 50 is off */
+  
+  
+  display: block !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  border-radius: 50%;
+  /* attempts at getting stuff like background only to show on scroll */
+  filter: invert(0%);
+  opacity: 100%;
+}
+
+/* solves bug where re-purposed div would obstruct space in search bar selection */
+input {
+  z-index: 999 !important;
+}
+
+/* in images mode, a acts weird. Select for its containter in this envirnment and fix. */
+form .qlS7ne a#logo, form c-wiz a {
+  width: 60px !important; 
+  height: 130px !important;
+  max-height: none !important;
+  max-width: none !important;
+  left: -110px;
+  top: 5px;
+}
+form c-wiz a {
+  left: -110px !important;
+  top: 5px !important;
+}

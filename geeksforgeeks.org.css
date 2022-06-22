@@ -1,0 +1,24 @@
+/* ANTI-AD */
+
+/* ad bar to right */
+.rightBar {
+  display: none !important;
+}
+
+/* inline ads */
+[id*='_adr_abp_container'] {
+  display: none !important;
+}
+
+/* grow content space */
+.leftBar {
+  max-width: none !important;
+  /* 20% for menu, 80% for left bar. 
+  flex-basis is what the flex item width starts out as before flex (growth) kicks in for the remaining space*/
+  flex-basis: 80% !important;
+}
+
+/* "fancy bar" of ad at bottom */
+._bsa_fancybar {
+  display: none !important;
+}
