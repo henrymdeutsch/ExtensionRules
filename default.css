@@ -1,0 +1,17 @@
+/* keypress badge */
+.keypress_tracker {
+  position: absolute !important;
+  top: 60px; right: 100px !important;
+  background-color: #2b2b2b !important;
+  width: 50px !important;
+  padding: 2px !important;
+  border-radius: 10px !important;
+  z-index: 99999999999999999 !important;
+  text-align: center !important;
+  line-height: 20px !important;
+  font-size: 20px !important;
+  color: white !important;
+  opacity: 1;
+  transition: opacity 1s !important;
+  transition-delay: 0s !important;
+}
