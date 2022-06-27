@@ -27,6 +27,13 @@ function display_speed (num) {
     num.toFixed(1)}x`;
 }
 
+function remove_all_elements_of_class(class_name) {
+  let elements = document.getElementsByClassName(class_name);
+  while (elements.length > 0) {
+    elements[0].parentNode.removeChild(elements[0]);
+  }
+}
+
 // track whether or not option key is pressed
 let option_pressed = 0;
 window.onkeyup = function(e) {if (e.keyCode === 18) option_pressed = 0;}
@@ -93,6 +100,7 @@ document.onkeydown = function (e) {
       old_speed = new_speed;
 
       // show keypress tracker, then fade
+      remove_all_elements_of_class('keypress_tracker');
       document.body.appendChild(div);
       setTimeout(function() {
         div.style.opacity = 0;
