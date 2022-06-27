@@ -7,51 +7,63 @@ DE-FANGER
 }
 */
 
+/* ANTI-AD AND ADJUSTING MAIN CONTENT */
 /* Thumbnails on main page and sidebar */
 ytd-rich-grid-row:nth-child(n+15), #secondary {
   display: none !important;
 }
+/* Sets width of comments section */
+#columns > #primary, #columns > #primary > #primary-inner {
+  min-width: 850px !important;
+  max-width: 850px !important;
+  width: 850px !important;
+}
+.ytp-ad-image-overlay {
+  display: none !important;
+}
+
+/*** NOT THAT IMPORTANT ***/
 /* first row always seems to fuck up rendering, so just take out */
 .style-scope.ytd-rich-grid-renderer#contents:first-child {
   display: none !important;
 }
-
-/* Artist page */
-ytd-item-section-renderer:nth-child(n+2), ytd-grid-video-renderer:nth-child(n+4) {
-  display: none !important;
-}
-
 /* "Shorts" -- the second tag of this kind is News, so don't delete that */
 ytd-rich-section-renderer:nth-child(1) {
   display: none !important;
 }
-
-/* end-of-video thumbnails*/
-.html5-endscreen {
-  display: none !important;
-}
-
-/* no ads mid-watch */
-.ytp-ad-overlay-slot {
-  display: none !important;
-}
-
-
-/*** NOT THAT IMPORTANT ***/
-/* no shorts, trending, header*/
-ytd-reel-video-renderer:nth-child(n+4), ytd-video-renderer:nth-child(n+4), #header {
-  display: none !important;
-}
-
 /* horizontal line at top */
 ytd-rich-shelf-renderer {
   border: none !important;
 }
 
+/*** TIME DISPLAY ***/
+.henry_time {
+  position: fixed;
+  top: 65px; right: 20px; /* top: 60px; right: 100px !important; */ /*  */
+  z-index: 2147483647;
+  font-family: "Segoe UI", Helvetica, sans-serif;
+  font-size: 20px;
+  color: white;
+  line-height: 20px;
+  text-align: center;
+  background: linear-gradient(to left top, #a87bf2, #92f6ec); /* #92f6ec, #a87bf2 */ /* #e66465, #9198e5 */
+  padding: 3px 8px 2px 8px; /* bottom padding be whilin */
+  border-radius: 5px;
+  box-shadow: none;
+}
 
-/*** ASTHETIC ***/
+/*** KEYBOARD TRACKER ***/
+/* making rook for time display by moving keyboard tracker lower */
+.keypress_tracker {
+  top: 95px; /* 65 */
+  box-shadow: none; /* 0px 0px 5px rgb(195, 195, 195) */
+  border-radius: 5px;
+}
+
+
+/*** ELON ***/
 /* swap Y logo for our lord and savior */
-#logo-icon {
+/*#logo-icon {
   content: url('https://s1.3dmixers.com/things/64/fa/76/480689/large_display_ElonMusk_Original_Photo.webp');
   transform: rotate(90deg);
   width: 200px;
@@ -60,8 +72,7 @@ ytd-rich-shelf-renderer {
 }
 #logo-icon svg {
   display: none !important;
-}
-
+} */
 /* make all thumbnails our lord and savior */
 /*#contents:nth-child(even):not(#contents #content) .ytd-thumbnail img {
   content: url('https://s1.3dmixers.com/things/64/fa/76/480689/large_display_ElonMusk_Original_Photo.webp');
