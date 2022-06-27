@@ -29,7 +29,7 @@ function display_speed (num) {
 
 function remove_all_elements_of_class(class_name) {
   let elements = document.getElementsByClassName(class_name);
-  while (elements.length > 0) {
+  while (elements.length > 1) { // allow 1 other keypress tracker max so background shadow illuminates to some degree
     elements[0].parentNode.removeChild(elements[0]);
   }
 }
