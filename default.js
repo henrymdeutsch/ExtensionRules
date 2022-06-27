@@ -32,8 +32,8 @@ let option_pressed = 0;
 window.onkeyup = function(e) {if (e.keyCode === 18) option_pressed = 0;}
 window.onkeydown = function(e) {if (e.keyCode === 18) option_pressed = 1;}
 
-let old_speed = vids ? 1 : vids[0].playbackRate; // TODO: ignore if no videos
-let new_speed; // TODO: later set old speed to new speed
+let old_speed = vids ? 1 : vids[0].playbackRate;
+let new_speed = 1;
 let valid_command = true;
 document.onkeydown = function (e) {
   if (option_pressed) {
@@ -54,6 +54,7 @@ document.onkeydown = function (e) {
       // j- k+
       case 74: new_speed = old_speed - (less_than_or_equal_10(old_speed) ? 0.1 : 1); break; // j
       case 75: new_speed = old_speed + (less_than_10(old_speed) ? 0.1 : 1); break; // k
+      case 191: new_speed = old_speed; break; // ?
       // numbers
       case 192: new_speed = 0.5; break; // ~
       case 49: new_speed = 1; break; // 1
@@ -103,6 +104,7 @@ document.onkeydown = function (e) {
 
   }
   else {
-    console.log('option not pressed');
+    // don't tell me option wasn't pressed when I press option
+    if (e.keyCode != 18) console.log('option not pressed');
   }
 };
