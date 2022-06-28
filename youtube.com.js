@@ -19,7 +19,7 @@ function save_curr_time() {
 }
 
 function quit_after_minutes(max_mins) {
-  if (minutes != 0 && minutes % max_mins == 0) {
+  if (minutes != 0 && minutes % max_mins == 0 && seconds < 10) {
     window.location.href = 'www.google.com/';
   }
 }
@@ -55,3 +55,4 @@ let stopwatch = setInterval(function() {
   save_curr_time();
   quit_after_minutes(20);
 }, 1000);
+
