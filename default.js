@@ -44,7 +44,7 @@ let new_speed = 1;
 let valid_command = true;
 document.onkeydown = function (e) {
   if (option_pressed) {
-    console.log('option pressed');
+    // console.log('option pressed');
     e = e || window.event;
 
     // create dom object to display keypress
