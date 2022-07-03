@@ -27,11 +27,20 @@ function quit_after_minutes(max_mins) {
 function pause_play() {
   on_off = !on_off;
   localStorage['on_off'] = on_off;
-  console.log('option and space pressed');
+  console.log('on_off is now ' + on_off);
 }
 
+// for testing purposes
+function shout(msg) {
+  setInterval(function() {
+    console.log('local storage is ' + localStorage['on_off']);
+    console.log('var is ' + on_off);
+  }, 1000);
+}
+// shout(0);
+
 // get the stopwatch time of today, or restart it to 0 (if it's a new day, or no stopwatch exists)
-if (!localStorage['last_check-in'] || !localStorage['seconds'] || localStorage['last_check-in'] != get_day_id()) {
+if (!localStorage['last_check-in'] || !localStorage['on_off'] || localStorage['last_check-in'] != get_day_id()) {
   if (!localStorage['last_check-in'] || !localStorage['on_off']) {
     console.log('reset session storage because missing vars. last_check-in: ' + localStorage['last_check-in'] + ', seconds: ' + localStorage['seconds']);
   } else {
@@ -41,18 +50,19 @@ if (!localStorage['last_check-in'] || !localStorage['seconds'] || localStorage['
   localStorage['seconds'] = 0;
   localStorage['minutes'] = 0;
   localStorage['hours'] = 0;
-  localStorage['on_off'] = true;
+  localStorage['on_off'] = true; // stores as string
 }
 last_checkin = localStorage['last_check-in'];
 let seconds = localStorage['seconds'];
 let minutes = localStorage['minutes'];
 let hours = localStorage['hours'];
-let on_off = localStorage['on_off'];
+let on_off = localStorage['on_off'] == 'true';
 localStorage['last_check-in'] = get_day_id();
 
 // create <div class='henry_time'> to display time
 const timeDisplay = document.createElement('div');
 timeDisplay.classList.add('henry_time');
+timeDisplay.onclick = pause_play;
 timeDisplay.innerHTML = format_time(seconds, minutes, hours);
 document.body.appendChild(timeDisplay);
 let stopwatch = setInterval(function() {
@@ -66,20 +76,3 @@ let stopwatch = setInterval(function() {
   }
 }, 1000);
 
-// track whether or not option key is pressed
-let option_pressed = 0;
-window.onkeyup = function(e) {if (e.keyCode === 18) option_pressed = 0;}
-window.onkeydown = function(e) {if (e.keyCode === 18) option_pressed = 1;}
-
-// pause timer on spacebar
-document.onkeydown = function (e) {
-  if (option_pressed) {
-    // console.log('option pressed');
-    e = e || window.event;
-
-    switch (e.keyCode) {
-      case 18: break; // option
-      case 32: pause_play(); break; // space
-    }
-  }
-}

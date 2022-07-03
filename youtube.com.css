@@ -50,6 +50,13 @@ ytd-rich-shelf-renderer {
   padding: 3px 8px 2px 8px; /* bottom padding be whilin */
   border-radius: 5px;
   box-shadow: none;
+  box-sizing: border-box;
+}
+.henry_time:hover {
+  cursor: pointer;
+}
+.henry_time:active {
+  color: #2c2c2c;
 }
 
 /*** KEYBOARD TRACKER ***/
