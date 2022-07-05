@@ -58,6 +58,7 @@ document.onkeydown = function (e) {
     // (shift+num : ± 0.5)
     switch (e.keyCode) {
       case 18: break; // option
+      case 32: pause_play(); break; // space // for youtube
       // j- k+
       case 74: new_speed = old_speed - (less_than_or_equal_10(old_speed) ? 0.1 : 1); break; // j
       case 75: new_speed = old_speed + (less_than_10(old_speed) ? 0.1 : 1); break; // k
