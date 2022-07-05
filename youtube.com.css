@@ -57,6 +57,7 @@ ytd-rich-shelf-renderer {
 }
 .henry_time:active {
   color: #2c2c2c;
+  /* filter: invert(30%); */
 }
 
 /*** KEYBOARD TRACKER ***/
