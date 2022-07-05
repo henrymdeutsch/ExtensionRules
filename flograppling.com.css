@@ -2,3 +2,16 @@
 /* [data-google-query-id] {
   display: none !important;
 } */
+
+.sidebar [_ngcontent-flo-app-c128] {
+  display: none !important;
+}
+
+flo-header-layout [_ngcontent-flo-app-c128]:has(flo-lazy iframe) {
+  display: none !important;
+}
+
+div[sidebar] {
+  position: sticky !important;
+  top: 80px;
+}
