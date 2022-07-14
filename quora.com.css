@@ -1,0 +1,5 @@
+/* turn off infinite scroll past 20 */
+/* the first div is for you to post and n can be 0, so subtract 2 from num to get max # pannels. */
+#mainContent > div > div:nth-child(n + 20 + 2) {
+    display: none !important;
+}
