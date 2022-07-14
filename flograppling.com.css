@@ -3,7 +3,7 @@
   display: none !important;
 } */
 
-.sidebar [_ngcontent-flo-app-c128] {
+.sidebar [_ngcontent-flo-app-c128], [sidebar-ad-sticky], div:has(> div[sidebar-ad]), div:has(> flo-lazy[leaderboard-large]) {
   display: none !important;
 }
 
