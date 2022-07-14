@@ -1,0 +1,9 @@
+/* removes infinite scroll past 22 slides. */
+.ListingLayout-outerContainer > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(6) div:nth-child(n + 22) {
+    display: none !important;
+}
+
+/* back-up in case the above stops working */
+/* .rpBJOHq2PR60pnwJlUyP0 div:nth-child(n + 5) {
+    display: none !important;
+} */
