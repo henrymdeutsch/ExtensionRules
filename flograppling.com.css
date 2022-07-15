@@ -1,17 +1,41 @@
 /* use :has() */
 /* [data-google-query-id] {
-  display: none !important;
+    display: none !important;
 } */
 
 .sidebar [_ngcontent-flo-app-c128], [sidebar-ad-sticky], div:has(> div[sidebar-ad]), div:has(> flo-lazy[leaderboard-large]) {
-  display: none !important;
+    display: none !important;
 }
 
 flo-header-layout [_ngcontent-flo-app-c128]:has(flo-lazy iframe) {
-  display: none !important;
+    display: none !important;
 }
 
 div[sidebar] {
-  position: sticky !important;
-  top: 80px;
+    position: sticky !important;
+    top: 80px;
+}
+
+/*** TIME DISPLAY ***/
+.henry_time {
+    position: fixed;
+    top: 65px; right: 20px; /* top: 60px; right: 100px !important; */
+    z-index: 2147483647;
+    font-family: "Segoe UI", Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    line-height: 20px;
+    text-align: center;
+    background: linear-gradient(to left top, #a87bf2, #92f6ec); /* #92f6ec, #a87bf2 */ /* #e66465, #9198e5 */
+    padding: 3px 8px 2px 8px; /* bottom padding be whilin */
+    border-radius: 5px;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+.henry_time:hover {
+    cursor: pointer;
+}
+.henry_time:active {
+    color: #2c2c2c;
+    /* filter: invert(30%); */
 }
