@@ -1,6 +1,24 @@
+/* summary of everything I've done to Youtube:
+ * Timer: added a timer to track how long you've been on site (w/ pause & play, that rests each day, w/ capability of redirecting at a given time interval).
+ * Thumbnails: entirely removed end-of-video thumbnails, removed the sidebar of thumbnails, and reduced the thumbnails on the main site.
+ * Redirect: redirect to page at the end of every video.
+ * Speed-up: added speed-up capapbility in default.js.
+*/
+
+
 function get_day_id() {
   const d = new Date();
   return `${d.getMonth()}/${d.getDate()}`; // d/m
+}
+
+function sleep(milliseconds) {
+  return new Promise(
+    (resolve, reject) => {
+      setTimeout(function() {
+        resolve('foo');
+      }, milliseconds)
+    }
+  )
 }
 
 function format_time(seconds, minutes, hours) {
@@ -20,7 +38,7 @@ function save_curr_time() {
 
 function quit_after_minutes(max_mins) {
   if (minutes != 0 && minutes % max_mins == 0 && seconds < 3) {
-    window.location.href = 'www.google.com/';
+    window.location.href = 'https://leetcode.com/explore/featured/card/the-leetcode-beginners-guide/679/sql-syntax/4358/';
   }
 }
 
@@ -72,7 +90,28 @@ let stopwatch = setInterval(function() {
     if (minutes >= 60) { minutes %= 60; hours++; }
     timeDisplay.innerHTML = format_time(seconds, minutes, hours);
     save_curr_time();
-    quit_after_minutes(20);
+    // As it is, the window quits after each video is over, so I don't see a need for this.
+    // Note: if you ever wanted it to quit after a certain number of minutes, un-comment the following:
+    // quit_after_minutes(20);
   }
 }, 1000);
 
+
+/* Quit tab at end of a video */
+pausePlay = document.getElementsByClassName('ytp-play-button ytp-button')[0];
+let already_redirected = false
+setInterval(function() {
+  if (pausePlay.getAttribute('title') == 'Replay') {
+    if (!already_redirected) {
+      window.location.href = 'https://leetcode.com/explore/featured/card/the-leetcode-beginners-guide/679/sql-syntax/4358/';
+      
+      /* wait until window has loaded to scroll. Doesn't work. */
+      window.onload = function() {
+        window.scrollBy(0, 200);
+      }
+    }
+    already_redirected = true;
+  }
+  console.log('pausePlay: ' + pausePlay.getAttribute('title'));
+  console.log('pausePlay: ' + pausePlay.title);
+}, 1000);

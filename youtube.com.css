@@ -22,6 +22,11 @@ ytd-rich-grid-row:nth-child(n+15), #secondary {
   display: none !important;
 }
 
+/*** End of screen ***/
+.html5-endscreen {
+  display: none !important;
+}
+
 /*** NOT THAT IMPORTANT ***/
 /* first row always seems to fuck up rendering, so just take out */
 .style-scope.ytd-rich-grid-renderer#contents:first-child {
@@ -68,6 +73,16 @@ ytd-rich-shelf-renderer {
   border-radius: 5px;
 }
 
+/* endscreen next video suggestion you can't cancel */
+/* Note: this will only disable the visual count-down, but not the actual countdown. My JS redirects the page before the countdown can go through. */
+.ytp-autonav-endscreen-countdown-container {
+  display: none !important;
+}
+
+/* endscreen popup thumbnails */
+.ytp-ce-element.ytp-ce-video[data-layer='4'] { /*ytp-ce-element-show ytp-ce-top-left-quad ytp-ce-size-640 */
+  display: none !important;
+}
 
 /*** ELON ***/
 /* swap Y logo for our lord and savior */
