@@ -98,10 +98,17 @@ let stopwatch = setInterval(function() {
 
 
 /* Quit tab at end of a video */
-pausePlay = document.getElementsByClassName('ytp-play-button ytp-button')[0];
+let pausePlay = document.getElementsByClassName('ytp-play-button ytp-button')[0];
 let already_redirected = false
 setInterval(function() {
-  if (pausePlay.getAttribute('title') == 'Replay') {
+  // pausePlay alternates between being undefined and being a DOM element for some reason
+  // console.log('-----------------------------');
+  // console.log(pausePlay);
+
+  if (typeof pausePlay === 'undefined') {
+    // console.log('looking for pause button');
+    pausePlay = document.getElementsByClassName('ytp-play-button ytp-button')[0];
+  } else if (pausePlay.title == 'Replay') {
     if (!already_redirected) {
       window.location.href = 'https://leetcode.com/explore/featured/card/the-leetcode-beginners-guide/679/sql-syntax/4358/';
       
@@ -112,6 +119,4 @@ setInterval(function() {
     }
     already_redirected = true;
   }
-  console.log('pausePlay: ' + pausePlay.getAttribute('title'));
-  console.log('pausePlay: ' + pausePlay.title);
 }, 1000);

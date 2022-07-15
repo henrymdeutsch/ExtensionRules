@@ -1,44 +1,32 @@
-DE-FANGER
+/* DE-FANGER */
 /*** Makes it less addictive by reducing the number of thumbnails throughout the site. ***/
 
-/* main page */
-/*ytd-rich-grid-row, ytd-rich-item-renderer:nth-child(n+9), #secondary {
-    display: none !important;
-}
-*/
-
-/* ANTI-AD AND ADJUSTING MAIN CONTENT */
-/* Thumbnails on main page and sidebar */
-ytd-rich-grid-row:nth-child(n+15), #secondary {
+/* REDUCE ADS AND THUMBNAILS, reconfigure main content */
+ytd-rich-grid-row:nth-child(n+15), #secondary { /* Thumbnails on main page and sidebar */
   display: none !important;
 }
-/* Sets width of comments section */
-#columns > #primary, #columns > #primary > #primary-inner {
-  min-width: 850px !important;
+#columns > #primary, #columns > #primary > #primary-inner { /* Sets width of comments section */
+  min-width: 850px !important; 
   max-width: 850px !important;
   width: 850px !important;
 }
 .ytp-ad-image-overlay {
   display: none !important;
 }
-
-/*** End of screen ***/
-.html5-endscreen {
+.html5-endscreen { /* end-screen? */
   display: none !important;
 }
-
-/*** NOT THAT IMPORTANT ***/
-/* first row always seems to fuck up rendering, so just take out */
-.style-scope.ytd-rich-grid-renderer#contents:first-child {
+.ytp-autonav-endscreen-countdown-container { /* endscreen next video suggestion you can't cancel. Note: this will only disable the visual count-down, but not the actual countdown. My JS redirects the page before the countdown can go through. */
   display: none !important;
 }
-/* "Shorts" -- the second tag of this kind is News, so don't delete that */
-ytd-rich-section-renderer:nth-child(1) {
+.ytp-ce-element.ytp-ce-video[data-layer='4'] { /* endscreen popup thumbnails */
   display: none !important;
 }
-/* horizontal line at top */
-ytd-rich-shelf-renderer {
-  border: none !important;
+#logo { /* Youtube logo */
+  display: none !important;
+} 
+#items > *:nth-child(1) { /* Home */
+  display: none !important;
 }
 
 /*** TIME DISPLAY ***/
@@ -73,31 +61,13 @@ ytd-rich-shelf-renderer {
   border-radius: 5px;
 }
 
-/* endscreen next video suggestion you can't cancel */
-/* Note: this will only disable the visual count-down, but not the actual countdown. My JS redirects the page before the countdown can go through. */
-.ytp-autonav-endscreen-countdown-container {
+/*** NOT THAT IMPORTANT ***/
+.style-scope.ytd-rich-grid-renderer#contents:first-child { /* first row always seems to fuck up rendering, so just take out */
   display: none !important;
 }
-
-/* endscreen popup thumbnails */
-.ytp-ce-element.ytp-ce-video[data-layer='4'] { /*ytp-ce-element-show ytp-ce-top-left-quad ytp-ce-size-640 */
+ytd-rich-section-renderer:nth-child(1) { /* "Shorts" -- the second tag of this kind is News, so don't delete that */
   display: none !important;
 }
-
-/*** ELON ***/
-/* swap Y logo for our lord and savior */
-/*#logo-icon {
-  content: url('https://s1.3dmixers.com/things/64/fa/76/480689/large_display_ElonMusk_Original_Photo.webp');
-  transform: rotate(90deg);
-  width: 200px;
-  height: 200px;
-  display: block;
+ytd-rich-shelf-renderer { /* horizontal line at top */
+  border: none !important;
 }
-#logo-icon svg {
-  display: none !important;
-} */
-/* make all thumbnails our lord and savior */
-/*#contents:nth-child(even):not(#contents #content) .ytd-thumbnail img {
-  content: url('https://s1.3dmixers.com/things/64/fa/76/480689/large_display_ElonMusk_Original_Photo.webp');
-  transform: rotate(90deg);
-} */
